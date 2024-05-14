@@ -2,7 +2,7 @@
 const features = [
   {
     icon: 'assets/features/icon-01.svg',
-    title: 'Free and Open-Source',
+    title: 'Consejo directivo',
     ref: 'javascript:void(0)',
     refTitle: 'Learn More',
     description:
@@ -10,7 +10,7 @@ const features = [
   },
   {
     icon: 'assets/features/icon-02.svg',
-    title: 'Multipurpose Template',
+    title: 'Colegiatura',
     ref: 'javascript:void(0)',
     refTitle: 'Learn More',
     description:
@@ -18,7 +18,7 @@ const features = [
   },
   {
     icon: 'assets/features/icon-03.svg',
-    title: 'High-quality Design',
+    title: 'Carnet de colegiados',
     ref: 'javascript:void(0)',
     refTitle: 'Learn More',
     description:
@@ -26,12 +26,36 @@ const features = [
   },
   {
     icon: 'assets/features/icon-04.svg',
-    title: 'All Essential Elements',
+    title: 'Adscripción',
     ref: 'javascript:void(0)',
     refTitle: 'Learn More',
     description:
       'Lorem Ipsum is simply dummy text of the printing and industry.',
   },
+  {
+    icon: 'assets/features/icon-04.svg',
+    title: 'Registro de especialistas',
+    ref: 'javascript:void(0)',
+    refTitle: 'Learn More',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and industry.',
+  },
+  {
+    icon: 'assets/features/icon-04.svg',
+    title: 'Habilidad',
+    ref: 'javascript:void(0)',
+    refTitle: 'Learn More',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and industry.',
+  },
+  // {
+  //   icon: 'assets/features/icon-04.svg',
+  //   title: 'All Essential Elements',
+  //   ref: 'javascript:void(0)',
+  //   refTitle: 'Learn More',
+  //   description:
+  //     'Lorem Ipsum is simply dummy text of the printing and industry.',
+  // },
 ];
 ---
 
@@ -42,22 +66,22 @@ const features = [
       <div class="w-full px-4">
         <div class="mb-12 mx-auto max-w-[485px] lg:mb-[70px] text-center">
           <span class="mb-2 block text-lg font-semibold text-primary">
-            Features
+            
           </span>
           <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-            Main Features Of Play
+            Trámites CRO X CUSCO 
           </h2>
-          <p class="text-base text-body-color dark:text-dark-6">
+          <!-- <p class="text-base text-body-color dark:text-dark-6">
             There are many variations of passages of Lorem Ipsum available
             but the majority have suffered alteration in some form.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
     <div class="-mx-4 flex flex-wrap">
       {
         features.map((feature) => (
-          <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3 items-center justify-center">
             <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
               <div
                 class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
@@ -70,15 +94,15 @@ const features = [
               <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
                 {feature.title}
               </h4>
-              <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
+              {/* <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
                 {feature.description}
-              </p>
-              <a
+              </p> */}
+              {/* <a
                 href={feature.ref}
                 class="text-base font-medium text-dark dark:text-white hover:text-primary dark:hover:text-primary"
               >
                 {feature.refTitle}
-              </a>
+              </a> */}
             </div>
           </div>
         ))
