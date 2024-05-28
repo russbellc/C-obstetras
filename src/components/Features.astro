@@ -81,6 +81,7 @@ const features = [
     <div class="flex flex-wrap">
       {
         features.map((feature) => (
+<<<<<<< HEAD
             <div class="w-full px-10 py-3 md:w-1/2 lg:w-1/3 items-center justify-center" >
               <div class="wow fadeInUp group relative z-10 mb-1 overflow-hidden rounded-xl bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 p-4 text-center" data-wow-delay=".1s">
                 <div
@@ -93,6 +94,17 @@ const features = [
                 </div>
                 <h2 class="text-xl font-bold text-dark dark:text-white">{feature.title}</h2>
                 <p class="text-sm text-body-color dark:text-dark-6">Contenido de la tarjeta.</p>
+=======
+          <div class="w-full px-4 md:w-1/2 lg:w-1/4 items-center justify-center">
+            <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
+              <div
+                class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary"
+              >
+                <span
+                  class="absolute top-0 left-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"
+                ></span>
+                <img src={feature.icon} alt="icon" />
+>>>>>>> df2361508c35944b33b3c59ab23c903881ed6ac0
               </div>
             </div>
         ))
