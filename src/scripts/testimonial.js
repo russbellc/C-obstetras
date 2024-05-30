@@ -30,3 +30,25 @@ const testimonialSwiper = new Swiper('.testimonial-carousel', {
     },
   },
 });
+
+const thumbnails = document.querySelectorAll('.gatos');
+    const modal = document.getElementById('imageModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalImage = document.getElementById('modalImage');
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener('click', () => {
+        modalImage.src = thumbnail.src.replace('100', '600'); // Cambia la resolución si es necesario
+        modal.classList.remove('hidden');
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target == modal) {
+        modal.classList.add('hidden');
+      }
+    });
