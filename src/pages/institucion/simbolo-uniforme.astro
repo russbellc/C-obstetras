@@ -1,12 +1,18 @@
 ---
-import Aboutsection from '../../components/Aboutsection.astro';
 import Layout from '../../layouts/Layout.astro';
-import QuienesSomosv1 from '../../components/QuienesSomos.astro';
+import SimboloUniformes from '../../components/institucion/SimboloUniforme.astro'
+import Breadcrumb from '../../components/layout/Breadcrumb.astro';
+
 ---
+
 
 <Layout
   description="El Colegio Regional de Obstetras X Cusco tiene como misión ejercer la defensa, vigilancia y desarrollo de la profesión, basado en sus principios éticos y deontológicos con calidad, garantizando la gestión al servicio del colegiado, impulsando el rol social y humanístico con el propósito de mejorar la salud sexual y reproductiva de las mujeres, familia y comunidad contribuyendo al desarrollo del Perú."
-  title="Quienes Somos"
+  title="Consejo Directivo"
 >
-  <QuienesSomosv1 />
+  <Breadcrumb>
+    <Fragment slot="title">Símbolo - Uniforme</Fragment>
+    <Fragment slot="subtitulo"></Fragment>
+  </Breadcrumb>
+  <SimboloUniformes />
 </Layout>
