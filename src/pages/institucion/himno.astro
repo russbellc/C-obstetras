@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Himnos from '../../components/institucion/Himno.astro'
+import Breadcrumb from '../../components/layout/Breadcrumb.astro';
+
+---
+
+
+<Layout
+  description="El Colegio Regional de Obstetras X Cusco tiene como misión ejercer la defensa, vigilancia y desarrollo de la profesión, basado en sus principios éticos y deontológicos con calidad, garantizando la gestión al servicio del colegiado, impulsando el rol social y humanístico con el propósito de mejorar la salud sexual y reproductiva de las mujeres, familia y comunidad contribuyendo al desarrollo del Perú."
+  title="Consejo Directivo"
+>
+  <Breadcrumb>
+    <Fragment slot="title">HIMNO DEL COLEGIO DE OBSTETRAS DEL PERÚ</Fragment>
+    <Fragment slot="subtitulo">RESOLUCIÓN N° 114-2017/CDN/COP – Creación de nueva estrofa 09/10/2017</Fragment>
+  </Breadcrumb>
+  <Himnos />
+</Layout>
