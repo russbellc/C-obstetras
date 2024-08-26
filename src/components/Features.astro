@@ -1,52 +1,34 @@
 ---
 const features = [
   {
-    icon: 'assets/features/icon-01.svg',
-    title: 'Consejo directivo',
-    ref: 'javascript:void(0)',
-    refTitle: 'Learn More',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and industry.',
+    icon: 'assets/features/icon-03.svg',
+    title: 'Colegiatura',
+    ref: '/tramites/colegiatura',
   },
   {
     icon: 'assets/features/icon-02.svg',
-    title: 'Colegiatura',
-    ref: 'javascript:void(0)',
-    refTitle: 'Learn More',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and industry.',
+    title: 'Carnet de colegiados',
+    ref: '/tramites/carnet',
   },
   {
     icon: 'assets/features/icon-03.svg',
-    title: 'Carnet de colegiados',
-    ref: 'javascript:void(0)',
-    refTitle: 'Learn More',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and industry.',
-  },
-  {
-    icon: 'assets/features/icon-04.svg',
     title: 'Adscripción',
-    ref: 'javascript:void(0)',
-    refTitle: 'Learn More',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and industry.',
+    ref: '/tramites/adscripcion',
   },
   {
-    icon: 'assets/features/icon-04.svg',
+    icon: 'assets/features/icon-02.svg',
     title: 'Registro de especialistas',
-    ref: 'javascript:void(0)',
-    refTitle: 'Learn More',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and industry.',
+    ref: '/tramites/especialistas',
   },
   {
-    icon: 'assets/features/icon-04.svg',
+    icon: 'assets/features/icon-03.svg',
     title: 'Habilidad',
-    ref: 'javascript:void(0)',
-    refTitle: 'Learn More',
-    description:
-      'Lorem Ipsum is simply dummy text of the printing and industry.',
+    ref: '/tramites/habilidad',
+  },
+  {
+    icon: 'assets/features/icon-02.svg',
+    title: 'Tarifario 2024',
+    ref: '/tramites/tarifario',
   },
   // {
   //   icon: 'assets/features/icon-04.svg',
@@ -81,7 +63,9 @@ const features = [
     <div class="flex flex-wrap">
       {
         features.map((feature) => (
+          
             <div class="w-full px-10 py-3 md:w-1/2 lg:w-1/3 items-center justify-center" >
+              <a href={feature.ref} class="cursor-pointer">
               <div class="wow fadeInUp group relative z-10 mb-1 overflow-hidden rounded-xl bg-white dark:bg-dark-2 py-10 px-8 shadow-pricing sm:p-12 lg:py-10 lg:px-6 p-4 text-center" data-wow-delay=".1s">
                 <div
                 class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary mx-auto"
@@ -92,8 +76,9 @@ const features = [
                   <img src={feature.icon} alt="icon" />
                 </div>
                 <h2 class="text-xl font-bold text-dark dark:text-white">{feature.title}</h2>
-                <p class="text-sm text-body-color dark:text-dark-6">Contenido de la tarjeta.</p>
+                {/* <p class="text-sm text-body-color dark:text-dark-6">Contenido de la tarjeta.</p> */}
               </div>
+              </a>
             </div>
         ))
       }
