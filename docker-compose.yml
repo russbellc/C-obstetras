@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "4321:4321"
+    environment:
+      NODE_ENV: production
+    command: ["npm", "run", "preview"]

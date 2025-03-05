@@ -1,5 +1,5 @@
 # Utilizar una imagen base de Node.js
-FROM node:18-alpine
+FROM node:23.5.0-alpine
 
 # Establecer el directorio de trabajo
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Exponer el puerto en el que la aplicación se ejecutará
-EXPOSE 3000
+EXPOSE 4321
 
 # Comando para ejecutar la aplicación
 CMD ["npm", "run", "preview"]
