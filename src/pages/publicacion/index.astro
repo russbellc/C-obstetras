@@ -1,0 +1,14 @@
+---
+import {ModalWeb} from '../../components/ModalWeb.tsx'
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title="Publicación" description="Publicación de la página web">
+  <section id="images01" class="py-20 md:py-[90px] bg-gray-1 dark:bg-dark-2 overflow-hidden">
+    <div class="container px-4">
+      <ModalWeb client:only="react" />
+      
+  
+    </div>
+  </section>
+</Layout>

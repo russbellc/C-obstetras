@@ -1,3 +1,13 @@
+---
+import { fetchData } from '../utils/fetchData.js';
+import { useState } from 'react';
+
+const apiUrl = 'https://backend-crox.up.railway.app/api/publicaciones?page=1&limit=1';
+const { data } = await fetchData(apiUrl);
+const publication = data[0];
+
+---
+
 <!-- ====== Hero Section Start -->
 <section
   id="home"
@@ -13,21 +23,22 @@
           <h1
             class="text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]"
           >
-          Curso de Actualización: Manejo de Emergencias Obstétricas
+          {publication.web_titulo}
+          <!-- web_titulo	 -->
             </h1>
           <p
             class="mx-auto mt-3 mb-9 max-w-[600px] font-medium text-base text-white sm:text-lg sm:leading-[1.44]"
           >
-            En este curso, se abordarán temas cruciales para el manejo de emergencias obstétricas, proporcionando herramientas actualizadas para enfrentar complicaciones en el embarazo y parto.
+          {publication.web_mini_desc}
+          <!-- web_mini_desc -->
           </p>
           <ul class="mb-1 flex gap-5 flex-wrap items-center justify-center">
             <li>
               <a
-                href="/sinadepro/capacitacion"
+                href={`/publicacion/?id=${publication.web_id}`}
                 class="flex items-center gap-4 py-[14px] rounded-md bg-white/[0.12] px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark"
               >
-                Capacitate
-                <!-- Descubre nuestros servicios y cómo podemos ayudarte. -->
+                Mas Información
               </a>
             </li>
           </ul>
@@ -37,13 +48,9 @@
       <div class="w-full px-4">
         <div class="wow fadeInUp relative z-10 mx-auto max-w-[1045px]" data-wow-delay=".25s">
           <div class="mt-16">
-            <!-- <img
-              src="/assets/inicio/portada.jpg"
-              alt="Congreso"
-              class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
-            /> -->
+            <!-- web_img -->
             <img
-              src="/assets/capacitacion/img01.jpg"
+              src={publication.web_img}
               alt="Congreso"
               class="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
             />
@@ -1009,4 +1016,3 @@
     </div>
   </div>
 </section>
-<!-- ====== Hero Section End -->
